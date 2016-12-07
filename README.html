@@ -1,0 +1,630 @@
+
+	    <html>
+	      <head>
+				  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	        <title>README</title>
+					
+					<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+					<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+					<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+			
+				  <style>
+					pre {
+					    counter-reset: line-numbering;
+					    border: solid 1px #d9d9d9;
+					    border-radius: 0;
+					    background: #fff;
+					    padding: 0;
+					    line-height: 23px;
+					    margin-bottom: 30px;
+					    white-space: pre;
+					    overflow-x: auto;
+					    word-break: inherit;
+					    word-wrap: inherit;
+					}
+
+					pre a::before {
+					  content: counter(line-numbering);
+					  counter-increment: line-numbering;
+					  padding-right: 1em; /* space after numbers */
+					  width: 25px;
+					  text-align: right;
+					  opacity: 0.7;
+					  display: inline-block;
+					  color: #aaa;
+					  background: #eee;
+					  margin-right: 16px;
+					  padding: 2px 10px;
+					  font-size: 13px;
+					  -webkit-touch-callout: none;
+					  -webkit-user-select: none;
+					  -khtml-user-select: none;
+					  -moz-user-select: none;
+					  -ms-user-select: none;
+					  user-select: none;
+					}
+
+					pre a:first-of-type::before {
+					  padding-top: 10px;
+					}
+
+					pre a:last-of-type::before {
+					  padding-bottom: 10px;
+					}
+
+					pre a:only-of-type::before {
+					  padding: 10px;
+					}
+			
+					.highlight { background-color: #ffffcc } /* RIGHT */
+					</style>
+	      </head>
+	      <body>
+				  <div>
+							<div style='width:25%;'>
+									<ul id="tree" class="ztree" style='width:100%'>
+		
+									</ul>
+							</div>
+			        <div id='readme' style='width:70%;margin-left:20%;'>
+			          	<article class='markdown-body'>
+			            	<style>.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f0f0f0; }
+.highlight .c { color: #60a0b0; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .c1 { color: #60a0b0; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #40a070 } /* Literal.Number */
+.highlight .s { color: #4070a0 } /* Literal.String */
+.highlight .na { color: #4070a0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60add5 } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287e } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #bb60d5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #40a070 } /* Literal.Number.Bin */
+.highlight .mf { color: #40a070 } /* Literal.Number.Float */
+.highlight .mh { color: #40a070 } /* Literal.Number.Hex */
+.highlight .mi { color: #40a070 } /* Literal.Number.Integer */
+.highlight .mo { color: #40a070 } /* Literal.Number.Oct */
+.highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070a0 } /* Literal.String.Char */
+.highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+.highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #c65d09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+.highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+.highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+.highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */</style>
+<h1>零基础十分钟教你用Node.js写生成器：你只需要5步</h1>
+
+<p>用Node.js写生成器是件非常简单的事儿，原因是</p>
+
+<ul>
+<li>Node.js模块开发简单，js语法，而且二进制cli模块也极其简单</li>
+<li>Npm发布包是所有开源的包管理器里最简单好用的</li>
+<li>辅助模块多，将近40万个左右</li>
+</ul>
+
+<p>所以为了让大家零基础十分钟搞定生成器，这里精简一下，你只需要5步</p>
+
+<ol>
+<li>初始化模块</li>
+<li>cli二进制模块</li>
+<li>模板引擎使用</li>
+<li>解析cli参数和路径</li>
+<li>npm发布</li>
+</ol>
+
+<p>这里假定你已经安装了Node.js，至于是什么版本，如何安装的并不重要。</p>
+
+<p>先要介绍一下，什么是Npm？</p>
+
+<p>https://www.npmjs.com/</p>
+
+<p>npm is the package manager for</p>
+
+<ul>
+<li>browsers</li>
+<li>javascript</li>
+<li>nodejs</li>
+<li>io.js</li>
+<li>mobile</li>
+<li>bower</li>
+<li>docpad</li>
+<li>test</li>
+</ul>
+
+<p>简单理解：NPM（node package manager），通常称为node包管理器。顾名思义，它的主要功能就是管理node包，包括：安装、卸载、更新、查看、搜索、发布等。只要安装了Node.js，它会默认安装的。</p>
+
+<p>它可不只是Node.js package manager，可见其定位是很广的，这从侧面也佐证了大前端和node全栈的机会。以前nodejs吹牛都是那异步说事儿，现在都是拿生态说事儿，这话不错，在09年谈异步，很多语言性能都很弱，但事情要以发展的眼光看，现在很多语言都支持了，而且性能还不错，所以才显得nodejs性能没那么突出。</p>
+
+<p>无论做哪方面工作都可以使用npm，所以使用Node.js来开发各种模块都是非常方便的。</p>
+
+<h2>1）初始化模块</h2>
+
+<p>确认模块名称</p>
+<div class="highlight"><pre><span class="nv">$ </span>npm info xxxxxx
+</pre></div>
+<p>如果没有找到对应的包，说明你可以使用这个名字，然后在github建立仓库，clone到本地即可</p>
+<div class="highlight"><pre><span class="nv">$ </span>git clone xxx
+<span class="nv">$ </span>npm init -y
+</pre></div>
+<p>生成package.json文件，此文件为模块的描述文件，非常重要。</p>
+<div class="highlight"><pre><span class="p">{</span>
+<span class="w">  </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;version&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;description&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;main&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;index.js&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;scripts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;test&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;echo \&quot;</span><span class="nl">Error:</span><span class="w"> </span><span class="vg">no</span><span class="w"> </span><span class="vg">test</span><span class="w"> </span><span class="vg">specified</span><span class="o">\</span><span class="s2">&quot; &amp;&amp; exit 1&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="s2">&quot;keywords&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">  </span><span class="s2">&quot;author&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;license&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ISC&quot;</span>
+<span class="p">}</span>
+</pre></div>
+<p>说明</p>
+
+<ul>
+<li>main是模块的入口文件，即普通代码对外提供调用的api入口。</li>
+<li>scripts是npm scripts非常便利的，只要在package.json所在目录下，你执行npm test就会调用这里的test配置。如果是test，start等内置命令之外的，可以通过<code>npm run xxx</code>来定义</li>
+</ul>
+
+<h2>2）cli二进制模块</h2>
+
+<p>Node.js分2种模块</p>
+
+<ul>
+<li>普通模块，供代码调用</li>
+<li>二进制模块，提供cli调用</li>
+</ul>
+
+<p>大家都知道，生成器是cli工具，所以我们应该使用cli二进制模块</p>
+
+<p>手动修改package.json文件</p>
+<div class="highlight"><pre><span class="p">{</span>
+<span class="w">  </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;version&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;description&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;main&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;index.js&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;bin&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;gen&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;gen.js&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="s2">&quot;scripts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;test&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;echo \&quot;</span><span class="nl">Error:</span><span class="w"> </span><span class="vg">no</span><span class="w"> </span><span class="vg">test</span><span class="w"> </span><span class="vg">specified</span><span class="o">\</span><span class="s2">&quot; &amp;&amp; exit 1&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="s2">&quot;keywords&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">  </span><span class="s2">&quot;author&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;license&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ISC&quot;</span>
+<span class="p">}</span>
+</pre></div>
+<p>这里主要增加里一个<code>bin</code>的配置，bin里的<code>gen</code>为cli的具体命令，它的具体执行的文件gen.js，大家看到这是一个plain old object类型，所以可以配置多个命令的，各位可以按照自己的喜好来。</p>
+
+<p>既然<code>gen</code>的执行文件是<code>gen.js</code>，我们当然需要创建创建它</p>
+<div class="highlight"><pre><span class="nv">$ </span>touch gen.js
+</pre></div>
+<p>填写</p>
+<div class="highlight"><pre><span class="w">  </span><span class="err">#</span><span class="o">!/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">bin</span><span class="o">/</span><span class="vg">env</span><span class="w"> </span><span class="vg">node</span>
+
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">argv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">process</span><span class="o">.</span><span class="vg">argv</span><span class="p">;</span>
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">filePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">__dirname</span><span class="p">;</span>
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">currentPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">process</span><span class="o">.</span><span class="vg">cwd</span><span class="p">();</span>
+
+<span class="w">  </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="vg">argv</span><span class="p">)</span>
+<span class="w">  </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="vg">filePath</span><span class="p">)</span>
+<span class="w">  </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="vg">currentPath</span><span class="p">)</span>
+</pre></div>
+<p>说明</p>
+
+<ul>
+<li>argv是命令行的参数</li>
+<li>filePath是当前文件的路径，也就是以后安装后文件的路径，用于存放模板文件非常好</li>
+<li>currentPath是当前shell上下文路径，也就是生成器要生成文件的目标位置</li>
+</ul>
+
+<p>至此，二进制模块的代码就写完了，下面我们测一下</p>
+
+<p>1）本地安装此模块</p>
+
+<p>在package.json文件路径下，执行</p>
+<div class="highlight"><pre><span class="nv">$ </span>npm link
+
+/Users/sang/.nvm/versions/node/v4.4.5/bin/gen -&gt; /Users/sang/.nvm/versions/node/v4.4.5/lib/node_modules/a/gen.js
+/Users/sang/.nvm/versions/node/v4.4.5/lib/node_modules/a -&gt; /Users/sang/workspace/github/i5ting/a
+</pre></div>
+<p>此时说明已经安装成功了。</p>
+
+<p>2）执行gen测试</p>
+<div class="highlight"><pre><span class="nv">$ </span>gen
+<span class="o">[</span> <span class="s1">&#39;/Users/sang/.nvm/versions/node/v4.4.5/bin/node&#39;</span>,
+  <span class="s1">&#39;/Users/sang/.nvm/versions/node/v4.4.5/bin/gen&#39;</span> <span class="o">]</span>
+/Users/sang/workspace/github/i5ting/a
+/Users/sang/workspace/github/i5ting/a
+</pre></div>
+<p>可以换不同的目录来测试一下，看看结果的不同，来体会上面3个变量的妙用。</p>
+
+<h2>3）模板引擎使用</h2>
+
+<p>模板引擎是一种复用思想，通过定义模板，用的时候和数据一起编译，生成html，以便浏览器渲染。从这个定义里我们可以找出几个关键点</p>
+
+<blockquote>
+<p>编译(模板 + 数据) =&gt; html</p>
+</blockquote>
+
+<p>模板引擎有好多种，下面介绍2种典型的模板引擎</p>
+
+<ul>
+<li>ejs：嵌入js语法的模板引擎（e = embed），类似于jsp，asp，erb的，在html里嵌入模板特性，如果熟悉html写起来就非常简单，只要区分哪些地方是可变，哪些地方是不变即可</li>
+<li>jade：缩进式极简写法的模板引擎，发展历史 HAML -&gt; Jade -&gt; Slim -&gt; Slm，最早是ruby里有的，目前以jade用的最多，这种写法虽好，，但需要大脑去转换，这其实是比较麻烦的，如果对html不是特别熟悉，这种思维转换是非常难受的。</li>
+</ul>
+
+<p>更多见 https://github.com/tj/consolidate.js#supported-template-engines</p>
+
+<p>这里我们选一个，目前Node.js里最火的应该也是最好的<a href="https://mozilla.github.io/nunjucks/">Nunjucks</a>，我感觉它和ejs比较像，但跟jade一样强大，语法据说出自Python的某款模板引擎</p>
+<div class="highlight"><pre><span class="nv">$ </span>npm install --save nunjucks
+</pre></div>
+<p>然后我们修改模板引擎</p>
+<div class="highlight"><pre><span class="w">  </span><span class="err">#</span><span class="o">!/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">bin</span><span class="o">/</span><span class="vg">env</span><span class="w"> </span><span class="vg">node</span>
+
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">var</span><span class="w"> </span><span class="vg">argv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">process</span><span class="o">.</span><span class="vg">argv</span><span class="p">;</span>
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">var</span><span class="w"> </span><span class="vg">filePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">__dirname</span><span class="p">;</span>
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">var</span><span class="w"> </span><span class="vg">currentPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">process</span><span class="o">.</span><span class="vg">cwd</span><span class="p">();</span>
+<span class="w">  </span><span class="o">//</span>
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="vg">argv</span><span class="p">)</span>
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="vg">filePath</span><span class="p">)</span>
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="vg">currentPath</span><span class="p">)</span>
+
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">nunjucks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">require</span><span class="p">(</span><span class="c1">&#39;nunjucks&#39;)</span>
+
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">compiledData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">nunjucks</span><span class="o">.</span><span class="vg">renderString</span><span class="p">(</span><span class="c1">&#39;Hello {{ username }}&#39;, { username: &#39;James&#39; });</span>
+
+<span class="w">  </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="vg">compiledData</span><span class="p">)</span>
+</pre></div>
+<p>注释一下前面说的3个变量，这里我们只看nunjucks代码。这是最简单的demo。</p>
+
+<ul>
+<li>1）引入nunjucks模块</li>
+<li>2）nunjucks.renderString方法是编译模板用的，它有2个参数
+
+<ul>
+<li>第一个是模板字符串</li>
+<li>第二个是json数据</li>
+</ul></li>
+<li>3）compiledData就是编译后的结果</li>
+</ul>
+
+<p>结合上面说的模板引擎原理，</p>
+
+<blockquote>
+<p>编译(模板 + 数据) =&gt; html</p>
+</blockquote>
+
+<p>再理解一下，效果会更好。</p>
+
+<p>但是这样看来对我们没啥用啊，生成器的内容总不能都写到字符串里吧？所以继续改造，把模板独立出去，然后通过文件读写来获取模板字符串。</p>
+
+<p>创建一个gen.tpl，内容为<code>Hello {{ username }}</code>，下面我们看看如何修改gen.js来读取模板。</p>
+<div class="highlight"><pre><span class="vg">var</span><span class="w"> </span><span class="vg">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">require</span><span class="p">(</span><span class="c1">&#39;fs&#39;)</span>
+<span class="vg">var</span><span class="w"> </span><span class="vg">nunjucks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">require</span><span class="p">(</span><span class="c1">&#39;nunjucks&#39;)</span>
+
+<span class="vg">var</span><span class="w"> </span><span class="vg">tpl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">fs</span><span class="o">.</span><span class="vg">readFileSync</span><span class="p">(</span><span class="c1">&#39;./gen.tpl&#39;).toString()</span>
+
+<span class="vg">var</span><span class="w"> </span><span class="vg">compiledData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">nunjucks</span><span class="o">.</span><span class="vg">renderString</span><span class="p">(</span><span class="vg">tpl</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">username:</span><span class="w"> </span><span class="c1">&#39;James&#39; });</span>
+
+<span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="vg">compiledData</span><span class="p">)</span>
+</pre></div>
+<ul>
+<li>1) 引入fs模块，因为要读取文件</li>
+<li>2）fs.readFileSync(&#39;./gen.tpl&#39;).toString()，使用了一个读取文件的同步方法，并把文件内容转成字符串，原来是buffer</li>
+</ul>
+
+<p>读文件还是挺简单吧。那么写文件呢？</p>
+<div class="highlight"><pre><span class="vg">fs</span><span class="o">.</span><span class="vg">writeFileSync</span><span class="p">(</span><span class="c1">&#39;./gen.xxx&#39;, compiledData)</span>
+</pre></div>
+<p>至此，一个生成器的模型就出来</p>
+<div class="highlight"><pre><span class="w">  </span><span class="err">#</span><span class="o">!/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">bin</span><span class="o">/</span><span class="vg">env</span><span class="w"> </span><span class="vg">node</span>
+
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">require</span><span class="p">(</span><span class="c1">&#39;fs&#39;)</span>
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">nunjucks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">require</span><span class="p">(</span><span class="c1">&#39;nunjucks&#39;)</span>
+
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">tpl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">fs</span><span class="o">.</span><span class="vg">readFileSync</span><span class="p">(</span><span class="c1">&#39;./gen.tpl&#39;).toString()</span>
+
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">compiledData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">nunjucks</span><span class="o">.</span><span class="vg">renderString</span><span class="p">(</span><span class="vg">tpl</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">username:</span><span class="w"> </span><span class="c1">&#39;James&#39; });</span>
+
+<span class="w">  </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="vg">compiledData</span><span class="p">)</span>
+
+<span class="w">  </span><span class="vg">fs</span><span class="o">.</span><span class="vg">writeFileSync</span><span class="p">(</span><span class="c1">&#39;./gen.xxx&#39;, compiledData)</span>
+</pre></div>
+<p>思考一下，可变得有哪些？</p>
+
+<ul>
+<li>&#39;./gen.tpl&#39;是输入模板</li>
+<li>{ username: &#39;James&#39; } 要编译的数据</li>
+<li>&#39;./gen.xxx&#39;是最终的输出</li>
+</ul>
+
+<p>那么，剩下的事儿就是围绕可变得内容来构造你想要的功能。</p>
+
+<h2>4）解析cli参数和路径</h2>
+
+<p>要说生成器，最经典的是rails的scaffold，曾经缔造了一个15分钟blog的神话</p>
+<div class="highlight"><pre><span class="nv">$ </span>rails g book name:string coordinates:string 
+</pre></div>
+<p>如果我们要实现它，怎么做呢？</p>
+
+<ul>
+<li>rails g是固定的用于生成的命令</li>
+<li>book是模型名称，俗称表名</li>
+<li>而name和coordinates都是字段名称，string是表中的类型</li>
+</ul>
+
+<p>可变的只有表名和字段信息。所以只要解析到这些就够了，换成我们的gen命令，大概是这样</p>
+<div class="highlight"><pre><span class="nv">$ </span>gen book name:string coordinates:string 
+</pre></div>
+<p>修改gen.js代码</p>
+<div class="highlight"><pre><span class="w">  </span><span class="err">#</span><span class="o">!/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">bin</span><span class="o">/</span><span class="vg">env</span><span class="w"> </span><span class="vg">node</span>
+
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">argv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">process</span><span class="o">.</span><span class="vg">argv</span><span class="p">;</span>
+<span class="w">  </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="vg">argv</span><span class="p">)</span>
+</pre></div>
+<p>执行gen命令的结果是</p>
+<div class="highlight"><pre><span class="nv">$ </span>gen book name:string coordinates:string 
+<span class="o">[</span> <span class="s1">&#39;/Users/sang/.nvm/versions/node/v4.4.5/bin/node&#39;</span>,
+  <span class="s1">&#39;/Users/sang/.nvm/versions/node/v4.4.5/bin/gen&#39;</span>,
+  <span class="s1">&#39;book&#39;</span>,
+  <span class="s1">&#39;name:string&#39;</span>,
+  <span class="s1">&#39;coordinates:string&#39;</span> <span class="o">]</span>
+</pre></div>
+<p>下面构造一个entity对象</p>
+<div class="highlight"><pre><span class="vg">var</span><span class="w"> </span><span class="vg">argv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">process</span><span class="o">.</span><span class="vg">argv</span><span class="p">;</span>
+
+<span class="vg">argv</span><span class="o">.</span><span class="vg">shift</span><span class="p">()</span>
+<span class="vg">argv</span><span class="o">.</span><span class="vg">shift</span><span class="p">()</span>
+<span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="vg">argv</span><span class="p">)</span>
+
+<span class="vg">var</span><span class="w"> </span><span class="vg">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nl">model:</span><span class="w"> </span><span class="vg">argv</span><span class="p">[</span><span class="il">0</span><span class="p">],</span>
+<span class="w">  </span><span class="nl">attr:</span><span class="p">{</span>
+
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="vg">for</span><span class="p">(</span><span class="vg">var</span><span class="w"> </span><span class="vg">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="il">1</span><span class="p">;</span><span class="w"> </span><span class="vg">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="vg">argv</span><span class="o">.</span><span class="vg">length</span><span class="p">;</span><span class="w"> </span><span class="vg">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">argv</span><span class="p">[</span><span class="vg">i</span><span class="p">]</span><span class="o">.</span><span class="vg">split</span><span class="p">(</span><span class="c1">&#39;:&#39;)</span>
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">arr</span><span class="p">[</span><span class="il">0</span><span class="p">];</span>
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">arr</span><span class="p">[</span><span class="il">1</span><span class="p">];</span>
+
+<span class="w">  </span><span class="vg">data</span><span class="o">.</span><span class="vg">attr</span><span class="p">[</span><span class="vg">k</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">v</span>
+<span class="p">}</span>
+
+<span class="vg">console</span><span class="o">.</span><span class="vg">dir</span><span class="p">(</span><span class="vg">data</span><span class="p">)</span>
+</pre></div>
+<p>执行</p>
+<div class="highlight"><pre><span class="nv">$ </span>gen book name:string coordinates:string 
+<span class="o">[</span> <span class="s1">&#39;book&#39;</span>, <span class="s1">&#39;name:string&#39;</span>, <span class="s1">&#39;coordinates:string&#39;</span> <span class="o">]</span>
+<span class="nv">data</span> <span class="o">=</span> <span class="o">{</span> 
+  model: <span class="s1">&#39;book&#39;</span>,
+  attr: <span class="o">{</span> 
+    name: <span class="s1">&#39;string&#39;</span>, 
+    coordinates: <span class="s1">&#39;string&#39;</span> 
+  <span class="o">}</span> 
+<span class="o">}</span>
+</pre></div>
+<p>那这里的data可以做什么呢？想想模板引擎里的第二个参数~</p>
+<div class="highlight"><pre><span class="c1">// tpl compile</span>
+<span class="k">var</span> <span class="n">compiledData</span> <span class="o">=</span> <span class="n">nunjucks</span><span class="p">.</span><span class="n">renderString</span><span class="p">(</span><span class="n">tpl</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+</pre></div>
+<p>修改模板gen.tpl</p>
+<div class="highlight"><pre><span class="n">module</span><span class="p">.</span><span class="n">exports</span> <span class="o">=</span> <span class="k">class</span> <span class="err">{{ </span><span class="nc">model</span> <span class="p">}}</span> <span class="p">{</span>
+  <span class="p">{</span><span class="err">%</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">attr</span> <span class="err">%</span><span class="p">}</span>
+    <span class="p">{{</span><span class="n">k</span><span class="p">}}:</span> <span class="p">{{</span><span class="n">v</span><span class="p">}},</span>
+  <span class="p">{</span><span class="err">%</span> <span class="k">else</span> <span class="err">%</span><span class="p">}</span>
+    <span class="k">error</span>
+  <span class="p">{</span><span class="err">%</span> <span class="n">endfor</span> <span class="err">%</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<p>结果gen.xxx为</p>
+<div class="highlight"><pre><span class="n">module</span><span class="p">.</span><span class="n">exports</span> <span class="o">=</span> <span class="k">class</span> <span class="nc">book</span> <span class="p">{</span>
+
+    <span class="n">name</span><span class="p">:</span> <span class="kt">string</span><span class="p">,</span>
+
+    <span class="n">coordinates</span><span class="p">:</span> <span class="kt">string</span><span class="p">,</span>
+
+<span class="p">}</span>
+</pre></div>
+<p>这里是只是示意，具体当按照你想要的结果为准。</p>
+<div class="highlight"><pre><span class="w">  </span><span class="err">#</span><span class="o">!/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">bin</span><span class="o">/</span><span class="vg">env</span><span class="w"> </span><span class="vg">node</span>
+
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">require</span><span class="p">(</span><span class="c1">&#39;fs&#39;)</span>
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">nunjucks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">require</span><span class="p">(</span><span class="c1">&#39;nunjucks&#39;)</span>
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">argv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">process</span><span class="o">.</span><span class="vg">argv</span><span class="p">;</span>
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">var</span><span class="w"> </span><span class="vg">filePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">__dirname</span><span class="p">;</span>
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">var</span><span class="w"> </span><span class="vg">currentPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">process</span><span class="o">.</span><span class="vg">cwd</span><span class="p">();</span>
+<span class="w">  </span><span class="o">//</span>
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="vg">filePath</span><span class="p">)</span>
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="vg">currentPath</span><span class="p">)</span>
+
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">cli</span><span class="w"> </span><span class="vg">parse</span>
+<span class="w">  </span><span class="vg">argv</span><span class="o">.</span><span class="vg">shift</span><span class="p">()</span>
+<span class="w">  </span><span class="vg">argv</span><span class="o">.</span><span class="vg">shift</span><span class="p">()</span>
+<span class="w">  </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="vg">argv</span><span class="p">)</span>
+
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nl">model:</span><span class="w"> </span><span class="vg">argv</span><span class="p">[</span><span class="il">0</span><span class="p">],</span>
+<span class="w">    </span><span class="nl">attr:</span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="vg">for</span><span class="p">(</span><span class="vg">var</span><span class="w"> </span><span class="vg">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="il">1</span><span class="p">;</span><span class="w"> </span><span class="vg">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="vg">argv</span><span class="o">.</span><span class="vg">length</span><span class="p">;</span><span class="w"> </span><span class="vg">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">var</span><span class="w"> </span><span class="vg">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">argv</span><span class="p">[</span><span class="vg">i</span><span class="p">]</span><span class="o">.</span><span class="vg">split</span><span class="p">(</span><span class="c1">&#39;:&#39;)</span>
+<span class="w">    </span><span class="vg">var</span><span class="w"> </span><span class="vg">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">arr</span><span class="p">[</span><span class="il">0</span><span class="p">];</span>
+<span class="w">    </span><span class="vg">var</span><span class="w"> </span><span class="vg">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">arr</span><span class="p">[</span><span class="il">1</span><span class="p">];</span>
+
+<span class="w">    </span><span class="vg">data</span><span class="o">.</span><span class="vg">attr</span><span class="p">[</span><span class="vg">k</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">v</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="c1">&#39;data = &#39;)</span>
+<span class="w">  </span><span class="vg">console</span><span class="o">.</span><span class="vg">dir</span><span class="p">(</span><span class="vg">data</span><span class="p">)</span>
+
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">read</span><span class="w"> </span><span class="vg">tpl</span>
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">tpl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">fs</span><span class="o">.</span><span class="vg">readFileSync</span><span class="p">(</span><span class="c1">&#39;./gen.tpl&#39;).toString()</span>
+
+<span class="w">  </span><span class="vg">console</span><span class="o">.</span><span class="vg">dir</span><span class="p">(</span><span class="vg">data</span><span class="p">)</span>
+
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">tpl</span><span class="w"> </span><span class="vg">compile</span>
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">compiledData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">nunjucks</span><span class="o">.</span><span class="vg">renderString</span><span class="p">(</span><span class="vg">tpl</span><span class="p">,</span><span class="w"> </span><span class="vg">data</span><span class="p">)</span>
+
+<span class="w">  </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="vg">compiledData</span><span class="p">)</span>
+
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">write</span><span class="w"> </span><span class="vg">file</span>
+<span class="w">  </span><span class="vg">fs</span><span class="o">.</span><span class="vg">writeFileSync</span><span class="p">(</span><span class="c1">&#39;./gen.xxx&#39;, compiledData)</span>
+</pre></div>
+<p>下面修改一下路径</p>
+
+<ul>
+<li>tpl从__dirname走</li>
+<li>而结果需要写到process.cwd()</li>
+</ul>
+
+<p>也就是我们前面说的那2个没有用到的变量filePath和currentPath。</p>
+<div class="highlight"><pre><span class="w">  </span><span class="err">#</span><span class="o">!/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">bin</span><span class="o">/</span><span class="vg">env</span><span class="w"> </span><span class="vg">node</span>
+
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">require</span><span class="p">(</span><span class="c1">&#39;fs&#39;)</span>
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">nunjucks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">require</span><span class="p">(</span><span class="c1">&#39;nunjucks&#39;)</span>
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">argv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">process</span><span class="o">.</span><span class="vg">argv</span><span class="p">;</span>
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">filePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">__dirname</span><span class="p">;</span>
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">currentPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">process</span><span class="o">.</span><span class="vg">cwd</span><span class="p">();</span>
+<span class="w">  </span><span class="o">//</span>
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="vg">filePath</span><span class="p">)</span>
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="vg">currentPath</span><span class="p">)</span>
+
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">cli</span><span class="w"> </span><span class="vg">parse</span>
+<span class="w">  </span><span class="vg">argv</span><span class="o">.</span><span class="vg">shift</span><span class="p">()</span>
+<span class="w">  </span><span class="vg">argv</span><span class="o">.</span><span class="vg">shift</span><span class="p">()</span>
+<span class="w">  </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="vg">argv</span><span class="p">)</span>
+
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nl">model:</span><span class="w"> </span><span class="vg">argv</span><span class="p">[</span><span class="il">0</span><span class="p">],</span>
+<span class="w">    </span><span class="nl">attr:</span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="vg">for</span><span class="p">(</span><span class="vg">var</span><span class="w"> </span><span class="vg">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="il">1</span><span class="p">;</span><span class="w"> </span><span class="vg">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="vg">argv</span><span class="o">.</span><span class="vg">length</span><span class="p">;</span><span class="w"> </span><span class="vg">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">var</span><span class="w"> </span><span class="vg">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">argv</span><span class="p">[</span><span class="vg">i</span><span class="p">]</span><span class="o">.</span><span class="vg">split</span><span class="p">(</span><span class="c1">&#39;:&#39;)</span>
+<span class="w">    </span><span class="vg">var</span><span class="w"> </span><span class="vg">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">arr</span><span class="p">[</span><span class="il">0</span><span class="p">];</span>
+<span class="w">    </span><span class="vg">var</span><span class="w"> </span><span class="vg">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">arr</span><span class="p">[</span><span class="il">1</span><span class="p">];</span>
+
+<span class="w">    </span><span class="vg">data</span><span class="o">.</span><span class="vg">attr</span><span class="p">[</span><span class="vg">k</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">v</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="c1">&#39;data = &#39;)</span>
+<span class="w">  </span><span class="vg">console</span><span class="o">.</span><span class="vg">dir</span><span class="p">(</span><span class="vg">data</span><span class="p">)</span>
+
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">read</span><span class="w"> </span><span class="vg">tpl</span>
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">tpl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">fs</span><span class="o">.</span><span class="vg">readFileSync</span><span class="p">(</span><span class="vg">filePath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="c1">&#39;/gen.tpl&#39;).toString()</span>
+
+<span class="w">  </span><span class="vg">console</span><span class="o">.</span><span class="vg">dir</span><span class="p">(</span><span class="vg">data</span><span class="p">)</span>
+
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">tpl</span><span class="w"> </span><span class="vg">compile</span>
+<span class="w">  </span><span class="vg">var</span><span class="w"> </span><span class="vg">compiledData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">nunjucks</span><span class="o">.</span><span class="vg">renderString</span><span class="p">(</span><span class="vg">tpl</span><span class="p">,</span><span class="w"> </span><span class="vg">data</span><span class="p">)</span>
+
+<span class="w">  </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="vg">compiledData</span><span class="p">)</span>
+
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">write</span><span class="w"> </span><span class="vg">file</span>
+<span class="w">  </span><span class="vg">fs</span><span class="o">.</span><span class="vg">writeFileSync</span><span class="p">(</span><span class="vg">currentPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="c1">&#39;/gen.xxx&#39;, compiledData)</span>
+</pre></div>
+<p>至此，完成了所有代码。此时你在任意目录输入</p>
+<div class="highlight"><pre><span class="nv">$ </span>gen book name:string coordinates:string 
+</pre></div>
+<p>你会发现当前目录下会有一个gen.xxx文件，和我们之前看到的结果一样。</p>
+
+<h2>5）npm发布</h2>
+
+<p>在package.json目录里执行</p>
+<div class="highlight"><pre><span class="nv">$ </span>npm publish . 
+</pre></div>
+<p>就可以了发布成功了。</p>
+
+<p>如果你想增加版本号，再次发布，你需要2步</p>
+<div class="highlight"><pre><span class="nv">$ </span>npm version patch
+<span class="nv">$ </span>npm publish .
+</pre></div>
+<p>你可以自己测试一下</p>
+<div class="highlight"><pre><span class="nv">$ </span>npm i -g xxxxxx
+</pre></div>
+<p>share给别人吧</p>
+
+<h2>更多</h2>
+
+<ul>
+<li>异常：各种可能考虑到并处理</li>
+<li>测试：按照各位喜好 mocha, ava, jest</li>
+<li>工具模块：比如使用debug模块处理调试信息，日志等</li>
+<li>argv解析模块：commander 或者yargs</li>
+<li>实用工具，比如各种大小写转换，驼峰式等 inflected</li>
+</ul>
+
+<h2>最后</h2>
+
+<p>生成器理论是可以生成一切内容的，那么生成能够生成器模板代码么？自己想想吧</p>
+
+			          	</article>
+			        </div>
+					</div>
+	      </body>
+	    </html>
+			<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+			<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
+			<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+      <script type="text/javascript" src="toc/toc_conf.js"></script>
+      
+			<SCRIPT type="text/javascript" >
+			<!--
+			$(document).ready(function(){
+          var css_conf = eval(markdown_panel_style);
+          $('#readme').css(css_conf)
+          
+          var conf = eval(jquery_ztree_toc_opts);
+  				$('#tree').ztree_toc(conf);
+
+				
+			});
+			//-->
+			</SCRIPT>
+	  
