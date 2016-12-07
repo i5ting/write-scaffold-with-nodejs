@@ -520,6 +520,7 @@ share给别人吧
 - 测试：按照各位喜好 mocha, ava, jest
 - 工具模块：比如使用debug模块处理调试信息，日志等
 - argv解析模块：commander 或者yargs
+- 实用工具，比如各种大小写转换，驼峰式等 inflected
 
 ## 最后
 
