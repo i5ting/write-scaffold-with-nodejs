@@ -1,0 +1,20 @@
+{
+  "name": "bigview-cli",
+  "version": "1.1.11",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "bpm": "index.js",
+    "bigview": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "tpl_apply": "^1.0.5"
+  }
+}

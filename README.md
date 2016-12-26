@@ -522,6 +522,166 @@ share给别人吧
 - argv解析模块：commander 或者yargs
 - 实用工具，比如各种大小写转换，驼峰式等 inflected
 
+## 实例
+
+### 关于bigview-cli
+
+最开始版本的生成器，期望安装如下
+
+```
+$ npm i -g bigview-cli
+```
+
+执行
+
+```
+$ bpm a b c d
+```
+
+这样就可以同时生成多个模块了。
+
+### 初始化
+
+package.json增加mkdirp和tpl_apply模块
+
+```
+{
+  "name": "bigview-cli",
+  "version": "1.1.11",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "bpm": "index.js",
+    "bigview": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "tpl_apply": "^1.0.5"
+  }
+}
+
+```
+
+说明
+
+- mkdirp是无限级创建目录的库
+- tpl_apply是我写的基于handlebar模块的库
+
+### index.js
+
+```
+  #!/usr/bin/env node
+
+  var fs = require("fs")
+  var argv = process.argv;
+  argv.shift();
+
+  var file_path = __dirname;
+  var current_path = process.cwd();
+
+  var tpl_apply = require('tpl_apply')
+  
+  // 根据bpm a b c d
+  // 获得abcd并创建目录，生产模板文件
+  for (var i = 1; i < argv.length; i++) {
+    // console.log(argv[i])
+    var moduleName = argv[i]
+    generatePageletModule (moduleName) 
+  }
+
+  // 生产单个Pagelet模块
+  function generatePageletModule (moduleName) {
+    // 读取/tpl/pagelet目录里的所有文件（目前只有一个层级，所以足够了）
+    var files = fs.readdirSync(file_path + "/tpl/pagelet")
+    // console.log(files)
+    for(var i in files){
+      var file = files[i]
+      // 根据模板文件，生产新的模块的文件
+      gOne(file, moduleName)
+    }
+  }
+
+  // 根据模板文件，生产新的模块的文件
+  function gOne(tpl, moduleName) {
+    if (/^\./.test(tpl)) return
+    // console.log(tpl)
+    var mkdirp = require('mkdirp');
+
+    var source = file_path + "/tpl/pagelet/" + tpl
+    var destDir = process.cwd() + "/" + moduleName
+    var dest = destDir + "/" + tpl
+  
+    // 先创建模块所需要的目录，不然无法写入文件的
+    mkdirp(destDir, function (err) {
+        if (err) console.error(err)
+        else console.log('generate ' + dest)
+        
+        // 使用tpl_apply根据模板文件和数据
+        // 生成dest目标文件
+        tpl_apply.tpl_apply(source, {
+          tpl: tpl,
+          name: moduleName
+        }, dest);
+    }); 
+  }
+
+```
+
+tpl_apply还有更高级的用法，用到自己查
+
+### 关于模板
+
+handlebars的模板是非常简单的，上面传的可变数据是
+
+```
+{
+  tpl: tpl,
+  name: moduleName
+}
+```
+
+有变量name，所以在模板中，使用{{name}}即可
+
+```
+'use strict'
+
+const Pagelet = require('biglet')
+
+module.exports = class MyPagelet extends Pagelet {
+  constructor () {
+    super()
+    this.root = __dirname
+    this.name = '{{name}}'
+    this.data =  {t: "测试" }
+    this.selector = '{{name}}'
+    this.location = '{{name}}'
+    this.tpl = 'index.html'
+    this.delay = 0
+  }
+
+  fetch () {
+    let self = this
+    return new Promise(function(resolve, reject){
+      setTimeout(function() {
+        // self.owner.end()
+        resolve(self.data)
+      }, self.delay)
+    })
+  }
+}
+
+```
+
+### 总结
+
+整体来说，还是一个非常实用的模块，而且比较简单，适合入门。如果说浪费时间的话，大概在如何确定模板的地方要思考，tpl目录里如何安排，这是业务决定的。
+
 ## 最后
 
 生成器理论是可以生成一切内容的，那么生成能够生成器模板代码么？自己想想吧
